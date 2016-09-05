@@ -1,6 +1,6 @@
 # npm-env
 
-Like [cross-env](https://github.com/kentcdodds/cross-env) but using [execa](https://github.com/sindresorhus/execa)
+Clone of [cross-env](https://github.com/kentcdodds/cross-env) prepending npm binaries to PATH.
 
 ## Why?
 

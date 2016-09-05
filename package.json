@@ -1,5 +1,5 @@
 {
-  "name": "cross-env",
+  "name": "npm-env",
   "version": "2.0.0",
   "description": "Run commands that set environment variables across platforms",
   "main": "src/index.js",
@@ -18,18 +18,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kentcdodds/cross-env.git"
+    "url": "https://github.com/sheerun/npm-env.git"
   },
   "keywords": [
-    "environment variables",
-    "cross platform"
+    "variables",
+    "cross-platform",
+    "npm",
+    "path",
+    "env",
+    "windows"
   ],
-  "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
+  "author": "Adam Stankiewicz <sheerun@sher.pl>",
+  "contributors": [
+    "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kentcdodds/cross-env/issues"
+    "url": "https://github.com/sheerun/npm-env/issues"
   },
-  "homepage": "https://github.com/kentcdodds/cross-env#readme",
+  "homepage": "https://github.com/sheerun/npm-env",
   "devDependencies": {
     "babel": "5.8.23",
     "chai": "3.3.0",
