@@ -2,6 +2,7 @@
 
 [![Unix CI](https://img.shields.io/travis/sheerun/cross-run/master.svg)](https://travis-ci.org/sheerun/cross-run)
 [![Windows CI](https://img.shields.io/appveyor/ci/sheerun/cross-run/master.svg)](https://ci.appveyor.com/project/sheerun/cross-run)
+[![Modern Node](https://img.shields.io/badge/modern-node-9BB48F.svg)](https://github.com/sheerun/modern-node)
 
 Like [cross-env](https://github.com/kentcdodds/cross-env), but able to run npm scripts.
 
