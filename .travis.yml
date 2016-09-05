@@ -15,9 +15,5 @@ before_install:
 before_script:
   - npm prune
 script:
-  - npm run eslint
-  - npm t
-  - npm run check-coverage
-after_success:
-  - npm run report-coverage
-  - npm run semantic-release
+  - npm run lint
+  - npm test
