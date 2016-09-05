@@ -4,7 +4,9 @@ Clone of [cross-env](https://github.com/kentcdodds/cross-env) prepending npm bin
 
 ## Why?
 
-As execa prepends npm binary paths to PATH, it allows shell-scripting outside of JSON file.
+Prepending npm binary paths to PATH allows shell-scripting outside of JSON file.
+
+This package follows the mindset of [scripty](https://github.com/testdouble/scripty) but prefers to not use `npm run` at all.
 
 ## Installation
 
