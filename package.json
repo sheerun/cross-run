@@ -1,9 +1,9 @@
 {
   "name": "npm-env",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Run commands that set environment variables across platforms",
-  "main": "src/index.js",
-  "bin": "src/cli.js",
+  "main": "dist/index.js",
+  "bin": "dist/cli.js",
   "scripts": {
     "start": "npm run test:watch",
     "prebuild": "rimraf dist && mkdir dist",
@@ -13,8 +13,7 @@
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "test:watch": "mocha src/*.test.js -w --compilers js:babel/register",
-    "test": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- -R spec src/index.test.js --compilers js:babel/register",
-    "prepublish": "npm run build"
+    "test": "istanbul cover -x *.test.js node_modules/mocha/bin/_mocha -- -R spec src/index.test.js --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
@@ -89,5 +88,5 @@
       "mocha"
     ]
   },
-  "files": ["dist"]
+  "files": ["dist/index.js", "dist/cli.js"]
 }
