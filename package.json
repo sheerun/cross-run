@@ -1,10 +1,10 @@
 {
-  "name": "npm-env",
-  "version": "2.1.0",
-  "description": "Run commands that set environment variables across platforms",
+  "name": "cross-run",
+  "version": "1.0.0",
+  "description": "Cross-platform utility for running npm scripts",
   "main": "dist/index.js",
   "bin": {
-    "npm-env": "dist/cli.js",
+    "cross-run": "dist/cli.js",
     "run": "dist/cli.js"
   },
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sheerun/npm-env.git"
+    "url": "https://github.com/sheerun/cross-run.git"
   },
   "keywords": [
     "variables",
@@ -36,9 +36,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sheerun/npm-env/issues"
+    "url": "https://github.com/sheerun/cross-run/issues"
   },
-  "homepage": "https://github.com/sheerun/npm-env",
+  "homepage": "https://github.com/sheerun/cross-run",
   "devDependencies": {
     "babel": "5.8.23",
     "chai": "3.3.0",

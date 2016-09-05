@@ -1,6 +1,8 @@
-# npm-env
+# cross-run
 
-Clone of [cross-env](https://github.com/kentcdodds/cross-env) prepending npm binaries to PATH.
+Like [cross-env](https://github.com/kentcdodds/cross-env), but able to run npm scripts.
+
+It prepends all npm paths like `node_modules/.bin` to `PATH` before executing provided script.
 
 ## Why?
 
@@ -11,7 +13,7 @@ This package follows the mindset of [scripty](https://github.com/testdouble/scri
 ## Installation
 
 ```
-npm install -g npm-env
+npm install -g cross-run
 ```
 
 ## Usage
@@ -21,13 +23,13 @@ npm install -g npm-env
 2. Create following script file in `scripts/build`:
 
 ```
-npm-env NODE_ENV=production webpack --config build/webpack.config.js
+cross-run NODE_ENV=production webpack --config build/webpack.config.js
 ```
 
 3. You can run this script cross-platform with simple:
 
 ```
-npm-env scripts/build
+cross-run scripts/build
 ```
 
 or even:

@@ -7,6 +7,9 @@ export default crossEnv;
 
 const envSetterRegex = /(\w+)=('(.+)'|"(.+)"|(.+))/;
 
+const pathKey = getPathKey();
+const originalPath = process.env[pathKey];
+
 function crossEnv(args) {
   const [command, commandArgs, env] = getCommandArgsAndEnvVars(args);
   if (command) {
@@ -18,6 +21,7 @@ function crossEnv(args) {
 }
 
 function getCommandArgsAndEnvVars(args) {
+  process.env[pathKey] = npmRunPath({ cwd: process.cwd(), path: originalPath });
   let command;
   const envVars = assign({}, process.env);
   const commandArgs = args.slice();
@@ -33,10 +37,6 @@ function getCommandArgsAndEnvVars(args) {
     if (process.env.APPDATA) {
       envVars.APPDATA = process.env.APPDATA;
     }
-    const pathKey = getPathKey();
-    envVars[pathKey] = npmRunPath({
-      path: process.env[pathKey]
-    });
   }
   return [command, commandArgs, envVars];
 }
