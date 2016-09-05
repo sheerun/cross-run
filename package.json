@@ -1,6 +1,6 @@
 {
   "name": "npm-env",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Run commands that set environment variables across platforms",
   "main": "dist/index.js",
   "bin": "dist/cli.js",
@@ -62,7 +62,6 @@
   },
   "dependencies": {
     "cross-spawn": "^3.0.1",
-    "execa": "^0.4.0",
     "lodash.assign": "^3.2.0",
     "npm-run-path": "^1.0.0",
     "path-key": "^1.0.0"
