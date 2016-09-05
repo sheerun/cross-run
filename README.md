@@ -18,15 +18,24 @@ npm install -g cross-run
 
 ## Usage
 
-1. **Remove** all non-lifecycle scripts from `package.json`
+First of all, you can use it, just like `cross-env`:
 
-2. Create following script file in `scripts/build`:
+```
+{
+  "scripts": {
+    "build": "run NODE_ENV=production webpack --config build/webpack.config.js"
+  }
+}
+
+```
+
+But you can use the same command directly from command line:
 
 ```
 run NODE_ENV=production webpack --config build/webpack.config.js
 ```
 
-3. You can run this script cross-platform with simple:
+You can put the same command as above to `script/build` and it cross-platform with:
 
 ```
 run scripts/build
