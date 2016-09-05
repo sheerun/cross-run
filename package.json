@@ -1,6 +1,6 @@
 {
   "name": "cross-run",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cross-platform utility for running npm scripts",
   "main": "lib/index.js",
   "bin": {
@@ -90,5 +90,8 @@
       "mocha"
     ]
   },
-  "files": ["lib/index.js", "lib/cli.js"]
+  "files": [
+    "lib/index.js",
+    "lib/cli.js"
+  ]
 }
