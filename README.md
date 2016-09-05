@@ -20,7 +20,7 @@ npm install -g cross-run
 
 First of all, you can use it, just like `cross-env`:
 
-```
+```json
 {
   "scripts": {
     "build": "run NODE_ENV=production webpack --config build/webpack.config.js"
@@ -31,13 +31,13 @@ First of all, you can use it, just like `cross-env`:
 
 But you can use the same command directly from command line:
 
-```
+```sh
 run NODE_ENV=production webpack --config build/webpack.config.js
 ```
 
 You can put the same command as above to `script/build` and it cross-platform with:
 
-```
+```sh
 run scripts/build
 ```
 
