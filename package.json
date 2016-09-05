@@ -1,9 +1,12 @@
 {
   "name": "npm-env",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "Run commands that set environment variables across platforms",
   "main": "dist/index.js",
-  "bin": "dist/cli.js",
+  "bin": {
+    "npm-env": "dist/cli.js",
+    "run": "dist/cli.js"
+  },
   "scripts": {
     "start": "npm run test:watch",
     "prebuild": "rimraf dist && mkdir dist",

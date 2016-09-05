@@ -30,6 +30,12 @@ npm-env NODE_ENV=production webpack --config build/webpack.config.js
 npm-env scripts/build
 ```
 
+or even:
+
+```
+run scripts/build
+```
+
 ## LICENSE
 
 MIT
