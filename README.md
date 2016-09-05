@@ -23,16 +23,10 @@ npm install -g cross-run
 2. Create following script file in `scripts/build`:
 
 ```
-cross-run NODE_ENV=production webpack --config build/webpack.config.js
+run NODE_ENV=production webpack --config build/webpack.config.js
 ```
 
 3. You can run this script cross-platform with simple:
-
-```
-cross-run scripts/build
-```
-
-or even:
 
 ```
 run scripts/build
