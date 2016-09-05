@@ -1,4 +1,7 @@
-# cross-run
+![cross-run](https://transfer.sheerun.net/C9q7z/cross-run.png)
+
+[![Unix CI](https://img.shields.io/travis/sheerun/cross-run/master.svg?maxAge=2592000)](https://travis-ci.org/sheerun/cross-run)
+[![Windows CI](https://img.shields.io/appveyor/ci/sheerun/cross-run/master.svg)](https://ci.appveyor.com/project/sheerun/cross-run)
 
 Like [cross-env](https://github.com/kentcdodds/cross-env), but able to run npm scripts.
 
