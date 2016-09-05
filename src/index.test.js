@@ -3,10 +3,12 @@ import sinonChai from 'sinon-chai';
 import sinon from 'sinon';
 import proxyquire from 'proxyquire';
 import assign from 'lodash.assign';
+import npmRunPath from 'npm-run-path';
+
 chai.use(sinonChai);
 
-const {expect} = chai;
-const spawned = {on: sinon.spy(), kill: sinon.spy()};
+const { expect } = chai;
+const spawned = { on: sinon.spy(), kill: sinon.spy() };
 const proxied = {
   'cross-spawn': {
     spawn: sinon.spy(() => spawned)
@@ -16,7 +18,6 @@ const proxied = {
 const crossEnv = proxyquire('./index', proxied);
 
 describe(`cross-env`, () => {
-
   beforeEach(() => {
     proxied['cross-spawn'].spawn.reset();
     spawned.on.reset();
@@ -93,6 +94,7 @@ describe(`cross-env`, () => {
     if (process.env.APPDATA) {
       env.APPDATA = process.env.APPDATA;
     }
+    expected.PATH = npmRunPath({ path: process.env.PATH });
     assign(env, expected);
     expect(ret, 'returns what spawn returns').to.equal(spawned);
     expect(proxied['cross-spawn'].spawn).to.have.been.calledOnce;

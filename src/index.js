@@ -1,5 +1,8 @@
-import {spawn} from 'cross-spawn';
+import { spawn } from 'cross-spawn';
+import npmRunPath from 'npm-run-path';
+import getPathKey from 'path-key';
 import assign from 'lodash.assign';
+
 export default crossEnv;
 
 const envSetterRegex = /(\w+)=('(.+)'|"(.+)"|(.+))/;
@@ -7,14 +10,14 @@ const envSetterRegex = /(\w+)=('(.+)'|"(.+)"|(.+))/;
 function crossEnv(args) {
   const [command, commandArgs, env] = getCommandArgsAndEnvVars(args);
   if (command) {
-    const proc = spawn(command, commandArgs, {stdio: 'inherit', env});
+    const proc = spawn(command, commandArgs, { stdio: 'inherit', env });
     process.on('SIGTERM', () => proc.kill('SIGTERM'));
     proc.on('exit', process.exit);
     return proc;
   }
 }
 
-function getCommandArgsAndEnvVars(args) { // eslint-disable-line
+function getCommandArgsAndEnvVars(args) {
   let command;
   const envVars = assign({}, process.env);
   const commandArgs = args.slice();
@@ -30,6 +33,10 @@ function getCommandArgsAndEnvVars(args) { // eslint-disable-line
     if (process.env.APPDATA) {
       envVars.APPDATA = process.env.APPDATA;
     }
+    const pathKey = getPathKey();
+    envVars[pathKey] = npmRunPath({
+      path: process.env[pathKey]
+    });
   }
   return [command, commandArgs, envVars];
 }
