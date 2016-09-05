@@ -2,15 +2,15 @@
   "name": "cross-run",
   "version": "1.0.0",
   "description": "Cross-platform utility for running npm scripts",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "bin": {
-    "cross-run": "dist/cli.js",
-    "run": "dist/cli.js"
+    "cross-run": "lib/cli.js",
+    "run": "lib/cli.js"
   },
   "scripts": {
     "start": "npm run test:watch",
-    "prebuild": "rimraf dist && mkdir dist",
-    "build": "babel src --out-dir dist",
+    "prebuild": "rimraf lib && mkdir lib",
+    "build": "babel src --out-dir lib",
     "commit": "git-cz",
     "lint": "xo src",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
@@ -90,5 +90,5 @@
       "mocha"
     ]
   },
-  "files": ["dist/index.js", "dist/cli.js"]
+  "files": ["lib/index.js", "lib/cli.js"]
 }

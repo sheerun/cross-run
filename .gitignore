@@ -6,7 +6,7 @@
 node_modules
 coverage
 nohup.out
-dist
+lib
 
 *.ignored.*
 *.ignored/
