@@ -3,7 +3,9 @@
 [![Unix CI](https://img.shields.io/travis/sheerun/cross-run/master.svg)](https://travis-ci.org/sheerun/cross-run)
 [![Modern Node](https://img.shields.io/badge/modern-node-9BB48F.svg)](https://github.com/sheerun/modern-node)
 
-Like [cross-env](https://github.com/kentcdodds/cross-env), but able to run npm scripts.
+**[DEPRECATED]** [cross-env](https://www.npmjs.com/package/cross-env) now supports npm scripts, please use it instead
+
+> Like [cross-env](https://github.com/kentcdodds/cross-env), but able to run npm scripts.
 
 It prepends all npm paths like `node_modules/.bin` to `PATH` before executing provided script.
 
