@@ -49,3 +49,10 @@ run scripts/build
 ## LICENSE
 
 MIT
+# https://tea.xyz/what-is-this-file
+---
+version: 1.0.0
+codeOwners:
+  - '0x9a83D81E53a3a284Ae7EDC06Ede2B51a9523f2BF'
+quorum: 1
+
